@@ -3,7 +3,7 @@
 document.getElementById("taskInput")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.code === "Enter") {
+    if (event.key === "Enter") {
         let taskInfo = document.getElementById('taskInput');
         addTasquesLS(taskInfo.value);
         taskInfo.value = "";
