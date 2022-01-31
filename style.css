@@ -275,6 +275,16 @@ footer {
 
 @media screen and (max-width: 800px) {
 
+
+:root {
+    --img-bg: url(./images/bg-mobile-light.jpg) ;
+  }
+
+  [data-theme="dark"] {
+    --img-bg: url(./images/bg-mobile-dark.jpg) ;
+
+}
+
     header {
         margin-top: 0;
     }
