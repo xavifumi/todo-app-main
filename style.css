@@ -207,8 +207,12 @@ li:hover > .tanca {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 3rem;
+    height: 2.4rem;
     color:hsl(234, 11%, 52%);
+}
+
+#botonsFiltre2 {
+    display: none;
 }
 
 #list {
@@ -234,31 +238,31 @@ footer {
 @media screen and (max-width: 800px) {
 
     header {
-        margin-top: 15px;
+        margin-top: 0;
     }
     body{
         font-size: 12px;
     }
 
     #app{
-        width: 100%;
+        width: 90%;
     }
 
     #taskInput {
-        padding: 0 0 0 5px;
+        padding: 0 5px;
         margin-bottom: 10px;
-        width: calc(100% - 5px);
+        width: calc(100% - 10px);
         font-size: 12px;
     }
 
     .requadre {
         padding: 0 10px;
-        width: 100%;
-        height: 2rem;
+        width: calc(100% - 20px);
+        height: 2.4rem;
     }
 
     ul {
-        min-height: 2rem;
+        min-height: 2.4rem;
     }
     input[type='checkbox'] {
         width: 1em;
@@ -278,12 +282,34 @@ footer {
     }
 
     #lower {
-        padding: 0 2px;
-        height: 2rem;
-        width: calc(100% - 4px);
+        padding: 0 15px;
+        height: 2.4rem;
+        width: calc(100% - 30px);
+    }
+
+    #botonsFiltre{
+        display: none;
+    }
+
+    #botonsFiltre2 {
+        border-radius: 4px;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #botonsFiltre2 span {
+        margin: 0 5px;
     }
 
     footer {
-        width: 100%;
+        width: 90%;
+        bottom: 30px;
+    }
+
+    .attribution {
+        display: none ;
+        
     }
 }
