@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
+:root {
+    --main-bg-color: rgb(228, 227, 227);
+    --main-color: black;
+    --list-bg-color: hsl(0, 0%, 98%);
+    --empty-bg-color: hsl(236, 33%, 92%);
+    --text-main-color: hsl(235, 19%, 35%);
+    --text-secondary-color:hsl(234, 11%, 52%);
+    --text-highlight-color: black;
+    --img-bg: url(./images/bg-desktop-light.jpg) ;
+    --img-button: url(./images/icon-sun.svg);
+  }
+
+  [data-theme="dark"] {
+    --main-bg-color: black;
+    --main-color: white;
+    --list-bg-color: hsl(237, 14%, 26%);
+    --empty-bg-color: hsl(236, 14%, 21%);
+    --text-main-color: hsl(234, 39%, 85%);
+    --text-secondary-color:hsl(234, 11%, 52%);
+    --text-highlight-color: hsl(236, 33%, 92%);
+    --img-bg: url(./images/bg-desktop-dark.jpg) ;
+    --img-button: url(./images/icon-moon.svg);
+
+}
+
+
 body {
     position: relative;
     height: 100vh;
@@ -7,14 +33,14 @@ body {
     flex-direction: column;
     align-items: center;
     
-    background-color: black;
-    background-image: url("./images/bg-desktop-light.jpg");
+    background-color: var(--main-bg-color);
+    background-image: var(--img-bg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     /*background: no-repeat 100% auto url("./images/bg-desktop-light.jpg") ;*/
     font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
-    color: white;
+    color: var(--main-color);
 }
 
 #app {
@@ -30,6 +56,7 @@ header {
 }
 
 header h1 {
+    color: white;
     letter-spacing: 9px;
     text-transform: uppercase;
 }
@@ -37,16 +64,27 @@ header h1 {
 .btnTransp{
     background-color: transparent;
     border: none;
-    margin-left: auto;
-    margin-right: 7px;
+    margin: auto 7px auto auto;
+}
+
+.theme-switch input {
+    display:none;
+  }
+
+.theme-switch{
+    width: 40px;
+    height: 40px;
+    background-image: var(--img-button);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .requadre {
     padding: 0 10px;
     width: 580px;
     height: 4rem;
-    background-color: hsl(237, 14%, 26%);
-    color: hsl(234, 39%, 85%);
+    background-color: var(--list-bg-color);
+    color: var(--text-main-color);
 
 }
 #taskInput {
@@ -68,7 +106,7 @@ ul{
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: hsl(237, 14%, 26%);
+    background-color: var(--list-bg-color);
     box-shadow: 0 10px 10px #0000004D;
 }
 
@@ -97,7 +135,7 @@ input[type='checkbox'] {
 .custom-checkbox > .checkbox-show{
     margin: 0 10px;
     border-radius: 50%;
-    border: solid 1px hsl(234, 11%, 52%);
+    border: solid 1px var(--text-secondary-color);
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -119,7 +157,7 @@ input[type='checkbox'] {
 
 li {
     cursor: pointer;
-    border-bottom: solid 1px hsl(234, 11%, 52%);
+    border-bottom: solid 1px var(--text-secondary-color);
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
@@ -131,12 +169,12 @@ li p {
 .ui-state-highlight { 
     height: 3em; 
     line-height: 1.2em; 
-    background-color: hsl(236, 14%, 21%);
+    background-color: var(--empty-bg-color);
     box-shadow: inset 0 10px 10px #0000001A;}
 
 .acabat {
     text-decoration: line-through;
-    color: hsl(234, 11%, 52%)
+    color: var(--text-secondary-color);
 
 }
 /* no funciona, p no és dins el label
@@ -181,7 +219,7 @@ li p {
 
 .falseBtn:hover{
     cursor: pointer ;
-    color: hsl(236, 33%, 92%);
+    color: var(--text-highlight-color);
 }
 
 .active {
@@ -208,7 +246,7 @@ li:hover > .tanca {
     align-items: center;
     justify-content: space-between;
     height: 2.4rem;
-    color:hsl(234, 11%, 52%);
+    color:var(--text-secondary-color);
 }
 
 #botonsFiltre2 {
