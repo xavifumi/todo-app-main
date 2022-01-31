@@ -1,0 +1,14 @@
+{
+  "name": "LListo!",
+  "short_name": "Llisto",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Apunta tasques i tatxa-les! Què hi ha millor?",
+  "icons": [{
+    "src": "/images/favicon-32x32.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  }],
+  "orientation": "any"
+}
